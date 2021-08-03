@@ -5,15 +5,15 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'mvn --version'
+                 echo 'Building...'
             }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                echo 'Testing.....'
             }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                echo 'Deploying.......'
             }
         }
     }
