@@ -1,6 +1,6 @@
 language: csharp
 solution: ConsoleApp1.sln
 mono: none
-dotnet: 2.1.502
+dotnet: 2.0.0
 script: 
  - dotnet build
