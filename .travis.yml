@@ -1,12 +1,9 @@
-language: csharp
+language:
+    csharp 
+sudo: required 
+mono: none 
+dotnet: 3.0 
 
-jobs:
-  include:
-    - stage: build
-      script: msbuild /p:Configuration=Debug ConsoleApp1.sln
-      
-    - stage: test
-      solution: ConsoleApp1.sln
-      script:
-        - dotnet restore
-        - dotnet test
+before_script: 
+- dotnet restore "ConsoleApp1.sln"
+- dotnet build "ConsoleApp1.sln" -c Debug
