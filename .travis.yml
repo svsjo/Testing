@@ -1,8 +1,7 @@
 language:
     csharp 
-sudo: required 
 mono: none 
-dotnet: 3.0 
+dotnet: 4.7.2
 
 before_script: 
 - dotnet restore "ConsoleApp1.sln"
