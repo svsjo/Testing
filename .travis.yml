@@ -1,5 +1,7 @@
 language: csharp
 solution: ConsoleApp1.sln
 mono: none
+install: 
+ - nuget restore ConsoleApp1.sln
 script: 
  - msbuild /p:Configuration=Debug ConsoleApp1.sln
