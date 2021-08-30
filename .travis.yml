@@ -1,4 +1,5 @@
 language: csharp
 solution: ConsoleApp1.sln
+mono: none
 script: 
  - msbuild /p:Configuration=Debug ConsoleApp1.sln
