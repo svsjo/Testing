@@ -3,8 +3,6 @@ solution: ConsoleApp1.sln
 mono: none
 os: windows
 
-install:
-  - nuget restore ConsoleApp1.sln
 script:
   - dotnet build ConsoleApp1.sln
   - powershell Get-ChildItem -Path C:\ -recurse -include *.sln
