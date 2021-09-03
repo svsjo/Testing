@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh '- msbuild /p:Configuration=Debug ConsoleApp1.sln'
+        sh 'msbuild /p:Configuration=Debug ConsoleApp1.sln'
       }
     }
 
