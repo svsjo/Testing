@@ -3,6 +3,13 @@ solution: ConsoleApp1.sln
 mono: none
 os: windows
 
-script:
-  - dotnet build ConsoleApp1.sln
-  - powershell Get-ChildItem -Path C:\ -recurse -include *.sln
+jobs:
+  include:
+    - stage: build
+      name: "Build project"
+      script: dotnet build ConsoleApp1.sln
+    - script: powershell Get-ChildItem -Path C:\ -recurse -include *.sln
+      name: "Check for .sln"
+    - stage: test
+      name: "Testing with dotnet test"
+      script: dotnet test ConsoleApp1.sln
