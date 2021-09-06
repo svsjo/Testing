@@ -1,0 +1,24 @@
+stages:
+    - build
+    - test
+
+build1:
+    stage: build
+    needs: []
+    script:
+        - "dotnet build"
+    artifacts:
+      paths:
+        - bin/
+
+build2:
+    stage: build
+    needs: []
+    script:
+        - Get-ChildItem -Path C:\Users\entep04\source\repos\ConsoleApp1 -recurse -include *.sln
+
+test1:
+    stage: test
+    needs: [build1]
+    script: 
+        - "dotnet test"
