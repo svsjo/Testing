@@ -13,3 +13,8 @@ jobs:
     - stage: test
       name: "Testing with dotnet test"
       script: dotnet test ConsoleApp1.sln
+ 
+notifications:
+  email:
+    - jonas_weis@arburg.com
+    - weis_jonas@mail.de
