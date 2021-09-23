@@ -26,7 +26,7 @@
           <param name="revisionRule" value="lastFinished" />
           <param name="revisionRuleBuildBranch" value="+:&lt;default&gt;" />
           <param name="schedulingPolicy" value="daily" />
-          <param name="timezone" value="SERVER" />
+          <param name="timezone" value="Europe/Berlin" />
         </parameters>
       </build-trigger>
       <build-trigger id="TRIGGER_5" type="schedulingTrigger">
