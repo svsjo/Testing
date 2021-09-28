@@ -20,7 +20,7 @@ pipeline {
 
     stage('Execute') {
       steps {
-        powershell 'bin\Debug\ConsoleApp1.exe'
+        powershell 'bin\\Debug\\ConsoleApp1.exe'
       }
     }
 
