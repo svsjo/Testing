@@ -18,9 +18,9 @@ pipeline {
       }
     }
 
-    stage('Test') {
+    stage('Execute') {
       steps {
-        powershell 'dotnet test ConsoleApp1.sln'
+        powershell 'ConsoleApp1.exe'
       }
     }
 
