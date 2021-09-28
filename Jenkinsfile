@@ -6,7 +6,7 @@ pipeline {
         stage('build1') {
           steps {
             sh 'dotnet build ConsoleApp1.sln'
-            archiveArtifacts 'ConsoleApp1.exe'
+            archiveArtifacts 'ConsoleApp1/bin/Debug/ConsoleApp1.exe'
           }
         }
 
@@ -21,7 +21,7 @@ pipeline {
 
     stage('Execute') {
       steps {
-        powershell 'ConsoleApp1.exe'
+        powershell 'ConsoleApp1/bin/Debug/ConsoleApp1.exe'
       }
     }
 
