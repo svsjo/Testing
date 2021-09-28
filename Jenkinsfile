@@ -3,15 +3,16 @@ pipeline {
   stages {
     stage('build') {
       parallel {
-        stage('build') {
+        stage('build1') {
           steps {
             sh 'dotnet build ConsoleApp1.sln'
+            archiveArtifacts 'ConsoleApp1.exe'
           }
         }
 
-        stage('ps') {
+        stage('build2') {
           steps {
-            powershell 'Get-ChildItem -Path C:\\Users\\entep04\\source\\repos\\ConsoleApp1 -recurse -include *.sln'
+            powershell 'echo DoSomething'
           }
         }
 
@@ -20,7 +21,7 @@ pipeline {
 
     stage('Execute') {
       steps {
-        powershell 'bin\\Debug\\ConsoleApp1.exe'
+        powershell 'ConsoleApp1.exe'
       }
     }
 
