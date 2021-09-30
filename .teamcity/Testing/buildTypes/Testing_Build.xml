@@ -6,7 +6,17 @@
     <parameters>
       <param name="exePath" value="ConsoleApp1\bin\Debug" />
     </parameters>
-    <build-runners />
+    <build-runners>
+      <runner id="RUNNER_8" name="Execute" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[ConsoleApp1.exe
+echo Hallo]]></param>
+          <param name="teamcity.build.workingDir" value="%exePath%" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
     <vcs-settings />
     <requirements />
     <build-triggers>
