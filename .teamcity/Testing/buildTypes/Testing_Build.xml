@@ -70,6 +70,15 @@ echo Hallo]]></param>
       <extension id="perfmon" type="perfmon">
         <parameters />
       </extension>
+      <extension id="BUILD_EXT_2" type="BuildFailureOnMessage">
+        <parameters>
+          <param name="buildFailureOnMessage.conditionType" value="contains" />
+          <param name="buildFailureOnMessage.messagePattern" value="abcabc" />
+          <param name="buildFailureOnMessage.outputText" value="Error 605" />
+          <param name="buildFailureOnMessage.reverse" value="false" />
+          <param name="buildFailureOnMessage.stopBuildOnFailure" value="true" />
+        </parameters>
+      </extension>
     </build-extensions>
     <cleanup />
   </settings>
