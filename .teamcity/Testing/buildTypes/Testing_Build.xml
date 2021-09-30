@@ -3,6 +3,9 @@
   <name>Build</name>
   <description />
   <settings ref="Testing_BuildTemplate">
+    <options>
+      <option name="executionTimeoutMin" value="10" />
+    </options>
     <parameters>
       <param name="exePath" value="ConsoleApp1\bin\Debug" />
     </parameters>
