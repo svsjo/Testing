@@ -79,6 +79,15 @@ echo Hallo]]></param>
           <param name="buildFailureOnMessage.stopBuildOnFailure" value="true" />
         </parameters>
       </extension>
+      <extension id="BUILD_EXT_3" type="pullRequests">
+        <parameters>
+          <param name="authenticationType" value="token" />
+          <param name="filterAuthorRole" value="EVERYBODY" />
+          <param name="providerType" value="github" />
+          <param name="secure:accessToken" value="credentialsJSON:55e515ea-f36c-4cb6-af79-e400203eca89" />
+          <param name="vcsRootId" value="Testing_HttpsGithubComSvsjoTestingGitRefsHeadsMain" />
+        </parameters>
+      </extension>
     </build-extensions>
     <cleanup />
   </settings>
