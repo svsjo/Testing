@@ -98,6 +98,15 @@ echo Hallo]]></param>
           <param name="vcsRootId" value="Testing_HttpsGithubComSvsjoTestingGitRefsHeadsMain" />
         </parameters>
       </extension>
+      <extension id="BUILD_EXT_4" type="BuildFailureOnMetric">
+        <parameters>
+          <param name="metricKey" value="DuplicatorStats" />
+          <param name="metricThreshold" value="100" />
+          <param name="metricUnits" value="metricUnitsDefault" />
+          <param name="moreOrLess" value="more" />
+          <param name="withBuildAnchor" value="false" />
+        </parameters>
+      </extension>
     </build-extensions>
     <cleanup />
   </settings>
