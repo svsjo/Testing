@@ -19,6 +19,16 @@ echo Hallo]]></param>
           <param name="use.custom.script" value="true" />
         </parameters>
       </runner>
+      <runner id="RUNNER_9" name="codeAnalyseDuplicates" type="dotnet-tools-dupfinder">
+        <parameters>
+          <param name="dotnet-tools-dupfinder.discard_cost" value="70" />
+          <param name="dotnet-tools-dupfinder.hashing.discard_literals" value="true" />
+          <param name="dotnet-tools-dupfinder.include_files" value="**/*.cs" />
+          <param name="jetbrains.resharper-clt.clt-path" value="%teamcity.tool.jetbrains.resharper-clt.DEFAULT%" />
+          <param name="jetbrains.resharper-clt.platform" value="x64" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
     </build-runners>
     <vcs-settings />
     <requirements />
