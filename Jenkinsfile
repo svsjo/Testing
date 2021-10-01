@@ -19,9 +19,9 @@ pipeline {
       }
     }
 
-    stage('Execute') {
+    stage('Test') {
       steps {
-        powershell 'ConsoleApp1/bin/Debug/ConsoleApp1.exe'
+        powershell 'echo Do Something'
       }
     }
 
